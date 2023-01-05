@@ -10,6 +10,8 @@ namespace SnackLadder
     {
         public int StartPoint = 0;
         int RanDomDice;
+        int ComputerChoice;
+        int Option = 0;
         public void StartPlaying()
         {
             Console.WriteLine("Game Started! Good Luck ");
@@ -17,6 +19,26 @@ namespace SnackLadder
             Random Random = new Random();
             RanDomDice = Random.Next(1, 7);
             Console.WriteLine("player Role Dice number is:" + " " + RanDomDice);
+            ComputerChoice = Random.Next(0, 3);
+            Console.WriteLine("Dice value:" + ComputerChoice);
+            switch (ComputerChoice)
+            {
+                case 0:
+                    Console.WriteLine("No Play");
+                    break;
+                case 1:
+                    StartPoint += RanDomDice;
+                    Console.WriteLine("Got Ladder:" + StartPoint);
+                    break;
+                case 2:
+                    StartPoint -= RanDomDice;
+                    Console.WriteLine("Snake Attack:" + StartPoint);
+                    break;
+                default:
+                    Console.WriteLine("Invalid Option");
+                    break;
+            }
         }
     }
+    
 }

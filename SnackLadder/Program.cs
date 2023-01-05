@@ -13,7 +13,7 @@ namespace SnackLadder
             Console.WriteLine("Welcome to Snake Ladder Sumulation Program");
             SnakeAndLadder snakeAndLadder = new SnakeAndLadder();
             snakeAndLadder.StartPlaying();
-            Console.ReadKey();
+             Console.ReadLine();
         }
     }
 }

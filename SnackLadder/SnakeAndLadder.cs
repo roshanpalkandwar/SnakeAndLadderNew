@@ -11,7 +11,7 @@ namespace SnackLadder
         public int StartPoint = 0;
         int RanDomDice;
         int ComputerChoice;
-        int Option = 0;
+        
         public void StartPlaying()
         {
             Console.WriteLine("Game Started! Good Luck ");
@@ -37,6 +37,10 @@ namespace SnackLadder
                 default:
                     Console.WriteLine("Invalid Option");
                     break;
+            }
+            if (StartPoint < 0)
+            {
+                StartPoint = 0;
             }
         }
     }
